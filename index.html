@@ -3,54 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finance App Launcher</title>
+    <title>Opening Finance Log...</title>
     <style>
         body {
             margin: 0;
+            background-color: #0f172a;
+            color: white;
+            font-family: sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #0f172a;
-            font-family: sans-serif;
-            color: white;
-        }
-        .container {
             text-align: center;
-            padding: 20px;
         }
-        .btn {
-            background-color: #2563eb;
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 12px;
-            font-weight: bold;
-            display: inline-block;
+        .loader {
+            border: 4px solid #1e293b;
+            border-top: 4px solid #2563eb;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
         }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        a { color: #2563eb; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h2>Redirecting to Finance...</h2>
-        <p>If the app doesn't open in 2 seconds, click below:</p>
-        
-        <a id="launchBtn" href="intent://pankajoffice5-ctrl.github.io/finance/#Intent;scheme=https;package=com.android.chrome;end" class="btn">
-            Open in Chrome
-        </a>
+    <div>
+        <div class="loader"></div>
+        <h2>Opening in Browser</h2>
+        <p>If it doesn't open automatically, <a href="https://pankajoffice5-ctrl.github.io/finance/">click here</a>.</p>
     </div>
 
     <script>
-        // This script runs as soon as you open the file
+        // This is the magic part that acts like a WhatsApp click
         window.onload = function() {
-            // Try to force the "WhatsApp style" breakout automatically
-            const link = document.getElementById('launchBtn').href;
-            
-            // Give the browser 500ms to settle, then "click" the link automatically
-            setTimeout(() => {
-                window.location.href = link;
-            }, 500);
+            // We use a small delay to ensure the page loads, then we "jump" to the default browser
+            setTimeout(function() {
+                window.location.href = "https://pankajoffice5-ctrl.github.io/finance/";
+            }, 500); 
         };
     </script>
 
