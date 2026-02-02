@@ -12,42 +12,46 @@
             align-items: center;
             height: 100vh;
             background-color: #0f172a;
-            font-family: -apple-system, sans-serif;
+            font-family: sans-serif;
             color: white;
         }
-        .card {
+        .container {
             background: #1e293b;
             padding: 40px 20px;
-            border-radius: 24px;
+            border-radius: 25px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             width: 85%;
-            max-width: 400px;
+            max-width: 350px;
         }
+        h1 { font-size: 22px; margin-bottom: 10px; }
+        p { color: #94a3b8; font-size: 14px; margin-bottom: 30px; }
+        
+        /* The button that fixes the login error */
         .btn {
-            display: inline-block;
-            background-color: #4285F4;
+            display: block;
+            background-color: #2563eb;
             color: white;
             text-decoration: none;
-            padding: 18px 32px;
+            padding: 16px;
             border-radius: 12px;
             font-weight: bold;
             font-size: 18px;
-            margin-top: 20px;
+            transition: 0.2s;
         }
+        .btn:active { transform: scale(0.98); background-color: #1d4ed8; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h2>My Finance Log</h2>
-        <p style="color: #94a3b8;">Click below to open in your secure browser and sign in with Google.</p>
+    <div class="container">
+        <h1>Finance Log</h1>
+        <p>Google login is blocked inside this app. Tap below to sign in using your full browser.</p>
         
         <a href="https://pankajoffice5-ctrl.github.io/finance/" 
-           target="_blank" 
-           rel="noopener noreferrer" 
+           target="_system" 
            class="btn">
-            Launch in Chrome
+            Login via Browser
         </a>
     </div>
 
