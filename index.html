@@ -3,39 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finance App Launcher</title>
+    <title>Finance Browser</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #1a1a1a;
-            font-family: Arial, sans-serif;
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+        #browser-header {
+            background: #333; color: white; padding: 10px;
+            display: flex; align-items: center; justify-content: space-between;
         }
-        .launcher-btn {
-            padding: 20px 40px;
-            font-size: 24px;
-            color: white;
-            background-color: #28a745;
+        iframe {
+            width: 100%;
+            height: calc(100vh - 50px);
             border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .launcher-btn:hover {
-            background-color: #218838;
-            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
-    <a href="https://pankajoffice5-ctrl.github.io/finance/" class="launcher-btn">
-        Open Finance App
-    </a>
+    <div id="browser-header">
+        <span>Finance App Container</span>
+        <button onclick="location.reload()">Refresh</button>
+    </div>
+
+    <iframe src="https://pankajoffice5-ctrl.github.io/finance/" 
+            sandbox="allow-forms allow-scripts allow-same-origin"
+            title="Finance Site">
+    </iframe>
 
 </body>
 </html>
