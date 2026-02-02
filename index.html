@@ -7,57 +7,52 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #0f172a; /* Dark theme to match your app */
-            color: white;
+            background-color: #0f172a;
             font-family: sans-serif;
             text-align: center;
         }
         .container {
             background: #1e293b;
-            padding: 40px 20px;
+            padding: 40px;
             border-radius: 24px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            width: 85%;
-            max-width: 400px;
+            width: 80%;
         }
-        h1 { margin-bottom: 10px; font-size: 24px; }
-        p { color: #94a3b8; margin-bottom: 30px; font-size: 14px; line-height: 1.5; }
-        
-        /* This button style ensures a "Full Browser" launch */
-        .launch-btn {
+        .chrome-btn {
             display: inline-block;
-            background-color: #2563eb;
+            background-color: #4285F4; /* Chrome Blue */
             color: white;
             text-decoration: none;
-            padding: 16px 32px;
-            border-radius: 12px;
+            padding: 18px 30px;
+            border-radius: 50px;
             font-weight: bold;
             font-size: 18px;
-            transition: transform 0.2s;
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
         }
-        .launch-btn:active {
-            transform: scale(0.95);
+        .note {
+            color: #94a3b8;
+            font-size: 12px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>My Finance Log</h1>
-        <p>To sign in with Google safely, click below to open the app in your secure browser.</p>
+        <h1 style="color: white;">Finance Launcher</h1>
+        <p style="color: #cbd5e1;">Click below to force open in <b>Chrome</b> to fix the Login error.</p>
         
-        <a href="https://pankajoffice5-ctrl.github.io/finance/" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="launch-btn">
-            🚀 Launch Securely
+        <a href="intent://pankajoffice5-ctrl.github.io/finance/#Intent;scheme=https;package=com.android.chrome;end" class="chrome-btn">
+            Open in Chrome
         </a>
+
+        <div class="note">
+            If Chrome does not open, ensure the Chrome app is installed on your device.
+        </div>
     </div>
 
 </body>
