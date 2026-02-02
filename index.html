@@ -3,31 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finance Browser</title>
+    <title>Finance App Launcher</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        #browser-header {
-            background: #333; color: white; padding: 10px;
-            display: flex; align-items: center; justify-content: space-between;
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0f172a; /* Dark theme to match your app */
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            text-align: center;
         }
-        iframe {
-            width: 100%;
-            height: calc(100vh - 50px);
-            border: none;
+        .card {
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            width: 80%;
+            max-width: 400px;
+        }
+        h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+        p { color: #94a3b8; margin-bottom: 2rem; }
+        
+        .launch-button {
+            display: block;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+        .launch-button:hover {
+            background-color: #1d4ed8;
         }
     </style>
 </head>
 <body>
 
-    <div id="browser-header">
-        <span>Finance App Container</span>
-        <button onclick="location.reload()">Refresh</button>
+    <div class="card">
+        <h1>Finance Log</h1>
+        <p>To sign in securely with Google, tap the button below to open in your full browser.</p>
+        
+        <a href="https://pankajoffice5-ctrl.github.io/finance/" target="_blank" class="launch-button">
+            Launch Finance App
+        </a>
     </div>
-
-    <iframe src="https://pankajoffice5-ctrl.github.io/finance/" 
-            sandbox="allow-forms allow-scripts allow-same-origin"
-            title="Finance Site">
-    </iframe>
 
 </body>
 </html>
