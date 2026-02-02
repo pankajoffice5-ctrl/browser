@@ -16,44 +16,43 @@
             color: white;
         }
         .container {
-            background: #1e293b;
-            padding: 40px 20px;
-            border-radius: 25px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            width: 85%;
-            max-width: 350px;
+            padding: 20px;
         }
-        h1 { font-size: 22px; margin-bottom: 10px; }
-        p { color: #94a3b8; font-size: 14px; margin-bottom: 30px; }
-        
-        /* The button that fixes the login error */
         .btn {
-            display: block;
             background-color: #2563eb;
             color: white;
             text-decoration: none;
-            padding: 16px;
+            padding: 15px 30px;
             border-radius: 12px;
             font-weight: bold;
-            font-size: 18px;
-            transition: 0.2s;
+            display: inline-block;
         }
-        .btn:active { transform: scale(0.98); background-color: #1d4ed8; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Finance Log</h1>
-        <p>Google login is blocked inside this app. Tap below to sign in using your full browser.</p>
+        <h2>Redirecting to Finance...</h2>
+        <p>If the app doesn't open in 2 seconds, click below:</p>
         
-        <a href="https://pankajoffice5-ctrl.github.io/finance/" 
-           target="_system" 
-           class="btn">
-            Login via Browser
+        <a id="launchBtn" href="intent://pankajoffice5-ctrl.github.io/finance/#Intent;scheme=https;package=com.android.chrome;end" class="btn">
+            Open in Chrome
         </a>
     </div>
+
+    <script>
+        // This script runs as soon as you open the file
+        window.onload = function() {
+            // Try to force the "WhatsApp style" breakout automatically
+            const link = document.getElementById('launchBtn').href;
+            
+            // Give the browser 500ms to settle, then "click" the link automatically
+            setTimeout(() => {
+                window.location.href = link;
+            }, 500);
+        };
+    </script>
 
 </body>
 </html>
