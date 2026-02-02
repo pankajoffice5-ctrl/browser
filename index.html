@@ -15,44 +15,48 @@
             height: 100vh;
             background-color: #0f172a; /* Dark theme to match your app */
             color: white;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: sans-serif;
             text-align: center;
         }
-        .card {
+        .container {
             background: #1e293b;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            width: 80%;
+            padding: 40px 20px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            width: 85%;
             max-width: 400px;
         }
-        h1 { font-size: 1.5rem; margin-bottom: 1rem; }
-        p { color: #94a3b8; margin-bottom: 2rem; }
+        h1 { margin-bottom: 10px; font-size: 24px; }
+        p { color: #94a3b8; margin-bottom: 30px; font-size: 14px; line-height: 1.5; }
         
-        .launch-button {
-            display: block;
+        /* This button style ensures a "Full Browser" launch */
+        .launch-btn {
+            display: inline-block;
             background-color: #2563eb;
             color: white;
             text-decoration: none;
-            padding: 15px 25px;
+            padding: 16px 32px;
             border-radius: 12px;
             font-weight: bold;
-            font-size: 1.1rem;
-            transition: background 0.3s;
+            font-size: 18px;
+            transition: transform 0.2s;
         }
-        .launch-button:hover {
-            background-color: #1d4ed8;
+        .launch-btn:active {
+            transform: scale(0.95);
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>Finance Log</h1>
-        <p>To sign in securely with Google, tap the button below to open in your full browser.</p>
+    <div class="container">
+        <h1>My Finance Log</h1>
+        <p>To sign in with Google safely, click below to open the app in your secure browser.</p>
         
-        <a href="https://pankajoffice5-ctrl.github.io/finance/" target="_blank" class="launch-button">
-            Launch Finance App
+        <a href="https://pankajoffice5-ctrl.github.io/finance/" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="launch-btn">
+            🚀 Launch Securely
         </a>
     </div>
 
