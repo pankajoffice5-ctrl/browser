@@ -7,55 +7,47 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background-color: #0f172a;
+            font-family: -apple-system, sans-serif;
             color: white;
-            font-family: sans-serif;
-            text-align: center;
         }
         .card {
             background: #1e293b;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            padding: 40px 20px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             width: 85%;
-            max-width: 350px;
+            max-width: 400px;
         }
-        h2 { margin-top: 0; color: #f8fafc; }
-        p { color: #94a3b8; font-size: 14px; line-height: 1.6; }
-        
-        /* THE FIX: A standard URL that opens in a NEW window */
         .btn {
-            display: block;
-            background-color: #4285F4; /* Google/Chrome Blue */
+            display: inline-block;
+            background-color: #4285F4;
             color: white;
             text-decoration: none;
-            padding: 15px;
+            padding: 18px 32px;
             border-radius: 12px;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 18px;
             margin-top: 20px;
-            transition: background 0.2s;
         }
-        .btn:active { background-color: #3367d6; }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <h2>Finance Log</h2>
-        <p>Google Login requires a secure browser window.</p>
+        <h2>My Finance Log</h2>
+        <p style="color: #94a3b8;">Click below to open in your secure browser and sign in with Google.</p>
         
         <a href="https://pankajoffice5-ctrl.github.io/finance/" 
            target="_blank" 
            rel="noopener noreferrer" 
            class="btn">
-            Open in Chrome
+            Launch in Chrome
         </a>
     </div>
 
